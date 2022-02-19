@@ -1,0 +1,34 @@
+{
+  "name": "fatihirday/eloquent",
+  "version": "v0.1.0",
+  "description": "additional features to eloquent",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "fatihirday",
+      "email": "fatihirday@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.3|^8.0",
+    "tutorigo/laravel-ide-macros": "^1.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Fatihirday\\Eloquent\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Laravel\\Tinker\\TinkerServiceProvider"
+      ]
+    }
+  },
+  "scripts":{
+    "post-install-cmd": [
+      "@php artisan ide-helper:macros"
+    ]
+  }
+}
