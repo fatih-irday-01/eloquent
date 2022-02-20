@@ -42,7 +42,7 @@ add provider to `config/app.php`
 
 Prepared for <b>Mysql</b> and <b>PostgreSql</b>
 
-####  - ifNull
+#### - ifNull
 
 Return the specified value IF the expression is NULL, otherwise return the expression
 
@@ -52,7 +52,7 @@ Model::ifNull('column', 'value', 'responseName');
 Model::query()->ifNull('column', 'value', 'responseName');
 ```
 
-####  - ifCount
+#### - ifCount
 
 Count of values satisfying the if condition
 
@@ -62,7 +62,7 @@ Model::ifCount('column', 12, 'responseName');
 Model::ifCount('column', '!=', 'value', 'responseName');
 ```
 
-####  - ifSum
+#### - ifSum
 
 Sum of values satisfying the if condition
 
@@ -72,28 +72,28 @@ Model::ifSum('column', '!=', 'value', 'responseName');
 Model::ifSum('column', '=', 'value', 'sumColumn', 'responseName');
 ```
 
-####  - sumColumn
+#### - sumColumn
 ```php
 Model::sumColumn('column'); // sum(column) as column
 // or
 Model::sumColumn('column', 'responseName'); // sum(column) as responseName
 ```
 
-####  - countColumn
+#### - countColumn
 ```php
 Model::countColumn('column'); // count(column) as column
 // or
 Model::countColumn('column', 'responseName'); // count(column) as responseName
 ```
 
-####  - concat
+#### - concat
 ```php
 Model::concat(['name', 'id'], 'responseName') // nameid
 // or
 Model::concat(['name', 'id'], 'responseName', '-') // name-id
 ```
 
-####  - caseWhen
+#### - caseWhen
 ```php
 Model::caseWhen([
     'updated_at > created_at' => 'updated_at', // When Then
@@ -102,7 +102,7 @@ Model::caseWhen([
 ], 'responseName')
 ```
 
-### whereLike
+### - whereLike
 
 ```php
 use Fatihirday\Eloquent\Libraries\Enums\Like;
@@ -117,7 +117,7 @@ Model::whereLike('columnName', 'value', Like::LAST);
 // WHERE columnName like 'value%'
 ```
 
-### orWhereLike
+### - orWhereLike
 
 ```php
 use Fatihirday\Eloquent\Libraries\Enums\Like;
@@ -135,7 +135,7 @@ Model::where('id', '>', 1)->orWhereLike('columnName', 'value', Like::LAST);
 
 
 
-### getSql
+### - getSql
 
 toSql and getBindings merge
 
@@ -144,7 +144,7 @@ echo Model::where('name', 'value')->getSql();
 // select * from `table_name` where `name` = 'fatih'
 ```
 
-### dumpSql
+### - dumpSql
 
 dump for getSql
 
@@ -153,7 +153,7 @@ Model::where('name', 'value')->dumpSql();
 // select * from `table_name` where `name` = 'fatih'
 ```
 
-### ddSql
+### - ddSql
 
 dd for getSql
 
