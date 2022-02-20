@@ -102,7 +102,7 @@ Model::caseWhen([
 ], 'responseName')
 ```
 
-### - whereLike
+#### - whereLike
 
 ```php
 use Fatihirday\Eloquent\Libraries\Enums\Like;
@@ -117,7 +117,7 @@ Model::whereLike('columnName', 'value', Like::LAST);
 // WHERE columnName like 'value%'
 ```
 
-### - orWhereLike
+#### - orWhereLike
 
 ```php
 use Fatihirday\Eloquent\Libraries\Enums\Like;
@@ -132,10 +132,7 @@ Model::where('id', '>', 1)->orWhereLike('columnName', 'value', Like::LAST);
 // WHERE id > 1 or columnName like 'value%'
 ```
 
-
-
-
-### - getSql
+#### - getSql
 
 toSql and getBindings merge
 
@@ -144,7 +141,7 @@ echo Model::where('name', 'value')->getSql();
 // select * from `table_name` where `name` = 'fatih'
 ```
 
-### - dumpSql
+#### - dumpSql
 
 dump for getSql
 
@@ -153,7 +150,7 @@ Model::where('name', 'value')->dumpSql();
 // select * from `table_name` where `name` = 'fatih'
 ```
 
-### - ddSql
+#### - ddSql
 
 dd for getSql
 
